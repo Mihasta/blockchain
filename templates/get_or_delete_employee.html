@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Employee</title>
+    <style type="text/css">
+        input {font-size: 30px}
+        button {font-size: 30px}
+    </style>
+</head>
+<body style="background-color: #e6e6ff">
+    {% if get %}
+    <div>
+        <form action = "{{ url_for('get_employee') }}" method="POST">
+            <input type="text" name="adr" placeholder="Address"><br><br>
+            <button>Get</button>
+        </form>
+    </div>
+    {% endif %}
+    {% if delete %}
+    <div>
+        <form action = "{{ url_for('delete_employee') }}" method="POST">
+            <input type="text" name="adr" placeholder="Address"><br><br>
+            <button>Delete</button>
+        </form>
+    </div>
+    {% endif %}
+</body>
+</html>

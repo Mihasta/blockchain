@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain</title>
+    <style type="text/css">
+        a {font-size:30px; text-decoration: none; font-family: FreeMono, monospace}
+    </style>
+</head>
+<body style="background-color: #e6e6ff">
+    {% if inf %}
+    <h1>{{ inf }}</h1>
+    {% endif %}
+    {% if empl %}
+    <h1>Name: {{ empl[0] }}</h1>
+    <h1>Position: {{ empl[1] }}</h1>
+    <h1>Phone Number: {{ empl[2] }}</h1>
+    {% endif %}
+    {% if own %}
+    <h1>Owner: {{ own }}</h1>
+    {% endif %}
+    {% if cost %}
+    <h1>Cost: {{ cost }}</h1>
+    {% endif %}
+    {% if balance %}
+    <h1>Balance: {{ balance }}</h1>
+    {% endif %}
+    {% if req %}
+    <h1>Requests:</h1>
+    <h1>request_id: {{ req[0] }}</h1>
+    <h1>request_type: {{ req[1] }}</h1>
+    <h1>home_address: {{ req[2] }}</h1>
+    {% endif %}
+    {% if list_home %}
+    <h1>Home list:</h1>
+    <h1>area: {{ list_home[0] }}</h1>
+    <h1>cost: {{ list_home[1] }}</h1>
+    <h1>address: {{ list_home[2] }}</h1>
+    {% endif %}
+    <a href="{{ url_for('to_add_emp') }}">Add Employee</a><br>
+    <a href="{{ url_for('to_get_emp') }}">Get Employee</a><br>
+    <a href="{{ url_for('to_edit_emp') }}">Edit Employee</a><br>
+    <a href="{{ url_for('to_delete_emp') }}">Delete Employee</a><br><br>
+    <a href="{{ url_for('to_add_req') }}">Add Request</a><br>
+    <a href="{{ url_for('get_request') }}">Get Request</a><br>
+    <a href="{{ url_for('to_process_request') }}">Process Request</a><br>
+    <a href="{{ url_for('get_list_home') }}">Get List_Home</a><br><br>
+    <a href="{{ url_for('get_owner') }}">Get Owner</a><br>
+    <a href="{{ url_for('get_cost') }}">Get Cost</a><br>
+    <a href="{{ url_for('get_balance') }}">Get Balance</a>
+</body>
+</html>

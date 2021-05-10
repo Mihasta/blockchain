@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Request</title>
+    <style type="text/css">
+        input {font-size: 30px}
+        button {font-size: 30px}
+    </style>
+</head>
+<body style="background-color: #e6e6ff">
+    <div>
+        <form action = "{{ url_for('add_request') }}" method="POST">
+            <input type="text" name="r_type" placeholder="rType"><br><br>
+            <input type="text" name="adr" placeholder="Address"><br><br>
+            <input type="text" name="area" placeholder="Area"><br><br>
+            <input type="text" name="cost" placeholder="Cost"><br><br>
+            <input type="text" name="new_owner" placeholder="New Owner"><br><br>
+            <button>Add</button>
+        </form>
+    </div>
+</body>
+</html>

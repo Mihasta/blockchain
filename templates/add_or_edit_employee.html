@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <style type="text/css">
+        input {font-size: 30px}
+        button {font-size: 30px}
+    </style>
+</head>
+<body style="background-color: #e6e6ff">
+    {% if add %}
+    <div>
+        <form action = "{{ url_for('add_employee') }}" method="POST">
+            <input type="text" name="adr" placeholder="Address"><br><br>
+            <input type="text" name="name" placeholder="Name"><br><br>
+            <input type="text" name="pos" placeholder="Position"><br><br>
+            <input type="text" name="phone" placeholder="PhoneNumber"><br><br>
+            <button>Add</button>
+        </form>
+    </div>
+    {% endif %}
+    {% if edit %}
+    <div>
+        <form action = "{{ url_for('edit_employee') }}" method="POST">
+            <input type="text" name="adr" placeholder="Address"><br><br>
+            <input type="text" name="name" placeholder="Name"><br><br>
+            <input type="text" name="pos" placeholder="Position"><br><br>
+            <input type="text" name="phone" placeholder="PhoneNumber"><br><br>
+            <button>Edit</button>
+        </form>
+    </div>
+    {% endif %}
+</body>
+</html>
